@@ -4,7 +4,9 @@ trigger:
 pool:
   vmImage: ubuntu-latest
 
-steps:
-- template: templates/docker.yaml
-  parameters:
-    containerRegistry: eteckcontainerregistry.azurecr.io/eteck
+jobs:
+- job: BuildandPushContainerImage
+  steps:
+  - template: templates/docker.yaml
+    parameters:
+      containerRegistry: eteckcontainerregistry.azurecr.io/eteck
