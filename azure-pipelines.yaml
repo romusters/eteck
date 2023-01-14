@@ -6,6 +6,5 @@ pool:
 
 steps:
 - template: templates/docker.yaml
-  displayName: 'Build Docker container'
   inputs:
   - containerRegistry: eteckcontainerregistry.azurecr.io/eteck
