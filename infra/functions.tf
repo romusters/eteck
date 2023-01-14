@@ -19,12 +19,14 @@ resource "azurerm_linux_function_app" "fa20eteck" {
   site_config {
     application_stack {
       docker {
-        registry_url      = azurerm_container_registry.acr.login_server
-        image_name        = azurerm_container_group.eteck.name
-        image_tag         = " latest"
-        registry_username = azurerm_container_registry.acr.admin_password
-        registry_password = azurerm_container_registry.acr.admin_username
+        registry_url = azurerm_container_registry.acr.login_server
+        image_name   = azurerm_container_group.eteck.name
+        image_tag    = "latest"
       }
     }
   }
+  identity {
+    type = "SystemAssigned"
+  }
+
 }

@@ -29,8 +29,8 @@ terraform init
 
 az login terraform
 terraform init
-terraform plan -var-file config def.tfvars.json
-terraform apply
+terraform plan -var-file ../config/dev.tfvars.json
+terraform apply -var-file ../config/dev.tfvars.json -auto-approve
 
 
 # How to do quality assurance

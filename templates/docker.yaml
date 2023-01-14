@@ -1,0 +1,12 @@
+parameters:
+- name: containerRegistry
+  type: string
+
+
+steps:
+- task: Docker@2
+  inputs:
+  containerRegistry: ${{ parameters.containerRegistry }}
+  command: 'buildAndPush'
+  Dockerfile: docker/Dockerfile
+  buildContext: .

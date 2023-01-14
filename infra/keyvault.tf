@@ -1,5 +1,5 @@
 resource "azurerm_key_vault" "mail_keyvault" {
-  name                       = "mailkeyvault"
+  name                       = "eteck-mailkeyvault"
   location                   = azurerm_resource_group.rg20eteckdev.location
   resource_group_name        = azurerm_resource_group.rg20eteckdev.name
   tenant_id                  = data.azurerm_client_config.current.tenant_id
@@ -16,7 +16,11 @@ resource "azurerm_key_vault" "mail_keyvault" {
     ]
 
     secret_permissions = [
+      "Set",
       "Get",
+      "Delete",
+      "Purge",
+      "Recover"
     ]
   }
 }

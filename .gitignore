@@ -1,6 +1,7 @@
 # Created by https://www.toptal.com/developers/gitignore/api/python,terraform,visualstudiocode
 # Edit at https://www.toptal.com/developers/gitignore?templates=python,terraform,visualstudiocode
-
+*.terraform.lock.hcl
+.terraform
 ### Python ###
 # Byte-compiled / optimized / DLL files
 __pycache__/
