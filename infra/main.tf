@@ -20,7 +20,3 @@ resource "azurerm_resource_group" "rg20eteckdev" {
   name     = "rg20eteckdev"
   location = "West Europe"
 }
-
-# data azurerm_container_registry registry_url {
-#   name = "containerRegistry"
-# }
