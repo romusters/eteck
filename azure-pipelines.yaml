@@ -7,4 +7,4 @@ pool:
 steps:
 - template: templates/docker.yaml
   parameters:
-  - containerRegistry: eteckcontainerregistry.azurecr.io/eteck
+    containerRegistry: eteckcontainerregistry.azurecr.io/eteck
