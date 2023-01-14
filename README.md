@@ -29,7 +29,7 @@ terraform init
 
 az login terraform
 terraform init
-terraform plan
+terraform plan -var-file config def.tfvars.json
 terraform apply
 
 

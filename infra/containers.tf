@@ -31,6 +31,16 @@ resource "azurerm_container_group" "eteck" {
     image  = "mcr.microsoft.com/azuredocs/eteck"
     cpu    = "0.5"
     memory = "1.5"
+
+    secure_environment_variables = {
+      PASSWORD = azurerm_key_vault_secret.gmail_app_secret.value
+    }
+
+    environment_variables = {
+      CONTENT    = var.content
+      START_DATE = var.start_date
+    }
+
   }
 
   tags = {
