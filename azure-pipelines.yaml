@@ -9,4 +9,4 @@ jobs:
   steps:
   - template: templates/docker.yaml
     parameters:
-      containerRegistry: "eteckContainerRegistryServiceConnectionDev2"
+      containerRegistry: "eteckContainerRegistryServiceConnectionDev"
