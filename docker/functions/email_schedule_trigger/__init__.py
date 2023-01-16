@@ -4,6 +4,8 @@ import logging
 
 import azure.functions as func
 
+# from src.mail import MailClient
+
 
 def main(mytimer: func.TimerRequest) -> None:
     """Send mail at a schedule

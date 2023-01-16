@@ -1,7 +1,7 @@
 resource "azurerm_key_vault" "mail_keyvault" {
-  name                       = "eteck-mailkeyvault"
-  location                   = azurerm_resource_group.rg20eteckdev.location
-  resource_group_name        = azurerm_resource_group.rg20eteckdev.name
+  name                       = "mail-project-keyvault"
+  location                   = azurerm_resource_group.rg20maildev.location
+  resource_group_name        = azurerm_resource_group.rg20maildev.name
   tenant_id                  = data.azurerm_client_config.current.tenant_id
   sku_name                   = "standard"
   soft_delete_retention_days = 7
@@ -13,14 +13,16 @@ resource "azurerm_key_vault" "mail_keyvault" {
     key_permissions = [
       "Create",
       "Get",
+      "List"
     ]
 
     secret_permissions = [
-      "Set",
-      "Get",
       "Delete",
+      "Get",
+      "List",
       "Purge",
-      "Recover"
+      "Recover",
+      "Set"
     ]
   }
 }
