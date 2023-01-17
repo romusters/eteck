@@ -1,5 +1,11 @@
 # Introduction
 Application which sends an e-mail at regular intervals.
+An Gmail App password needs to be created: https://myaccount.google.com/security.
+The application uses the password to send an e-mail to a recipient.
+The application is available as a Docker container to run locally or in the cloud as an Azure Function App.
+The whole infrastructure is managed by Terraform.
+CICD is done using Azure DevOps.
+
 # How to run
 ## Local
 python -m venv ~/virtualenvs/eteck
